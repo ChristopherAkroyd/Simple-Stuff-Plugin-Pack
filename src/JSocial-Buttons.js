@@ -9,28 +9,28 @@
  * @version 1.0 25th November 2014
  */
 ; (function ($) {
-    "use Strict";
+    "use strict";
     // Defaults and plugin name
-    var pluginName = "Button Colour Scheme Inverter";
-    var defaults = {
-        backgroundColour: "#12A5F4",
-        startingColour: "#000000",
-        socialSites: {
-            facebook: "#3b5998",
-            twitter: "#00ACED",
-            googlePlus: "#d34836",
-            stackOverflow: "#FF9900",
-            linkedIn: "#4875B4",
-            youtube: "#cd201f",
-            github: "#563D7C",
-            skype: "#12A5F4",
-            groupon: "#82b548",
-            imdb: "#f5de50",
-            kickstarter: "#2bde73",
-            paypal: "#179bd7"
-        },
-        time: 250
-    };
+    var pluginName = "Button Colour Scheme Inverter",
+        defaults = {
+            backgroundColour: "#12A5F4",
+            startingColour: "#000000",
+            socialSites: {
+                facebook: "#3b5998",
+                twitter: "#00ACED",
+                googlePlus: "#d34836",
+                stackOverflow: "#FF9900",
+                linkedIn: "#4875B4",
+                youtube: "#cd201f",
+                github: "#563D7C",
+                skype: "#12A5F4",
+                groupon: "#82b548",
+                imdb: "#f5de50",
+                kickstarter: "#2bde73",
+                paypal: "#179bd7"
+            },
+            time: 250
+        };
     function ContactButton(element, options) {
         this.$element = $(element);
         this.options = $.extend({}, defaults, options);
@@ -38,9 +38,7 @@
     }
     ContactButton.prototype = {
         init: function () {
-            var $el = this.$element;
-            var backgroundColour = this.getSocialColours();
-            var options = this.options;
+            var $el = this.$element, backgroundColour = this.getSocialColours(), options = this.options;
             $el.hover(function () {
                 $el.stop(true).animate({ backgroundColor: backgroundColour }, options.time);
             }, function () {
@@ -48,9 +46,9 @@
             });
         },
         getSocialColours: function () {
-            var $el = this.$element;
-            var socialSites = this.options.socialSites;
-            var socialSitesKeys = Object.keys(socialSites);
+            var $el = this.$element,
+                socialSites = this.options.socialSites,
+                socialSitesKeys = Object.keys(socialSites);
             for (var i = 0; i < socialSitesKeys.length; i++) {
                 if ($el.attr("class").search(socialSitesKeys[i]) != -1) {
                     var matchingKey = socialSitesKeys[i];
