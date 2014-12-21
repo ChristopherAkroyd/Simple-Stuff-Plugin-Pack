@@ -1,4 +1,4 @@
-/**
+/*
  * JSocial-Buttons
  * A small plugin used to animate a change in the background colour of a social media e.g. facebook or a contact button e.g. email, from a neutral colour(black/white)
  * to the background colour of the logo, for facebook this would be #3b5998. In order for the plugin to function correctly, each social media button
