@@ -7,7 +7,7 @@
  * @author Christopher Akroyd
  * @version 1.0 9th December 2014
  */
-; (function ($) {
+(function ($) {
     "use strict";
     var pluginName = "JBorder-to-background",
         defaults = {

@@ -8,7 +8,7 @@
  * @author Christopher Akroyd
  * @version 1.0 25th November 2014
  */
-; (function ($) {
+(function ($) {
     "use strict";
     // Defaults and plugin name
     var pluginName = "Button Colour Scheme Inverter",
