@@ -4,7 +4,8 @@
  * to the background colour of the logo, for facebook this would be #3b5998. In order for the plugin to function correctly, each social media button
  * must have a class attribute for the name of the social media button, for instance a social media button for facebook must have "facebook" as a class name
  * in order for the transition colour to be matched correctly.
- * Currently implemented defaults: facebook, twitter, googlePlus, stackOverflow, linkedIn, youtube, github, skype, groupon, imdb, kickstarter, payapl.
+ * Currently implemented defaults: facebook, twitter, googlePlus, stackOverflow, linkedIn, youtube, github, skype,
+ * groupon, imdb, kickstarter, payapl.
  * @author Christopher Akroyd
  * @version 1.0 25th November 2014
  */
@@ -33,6 +34,7 @@
         };
     function ContactButton(element, options) {
         this.$element = $(element);
+        defaults.startingColour = this.$element.css("background-color");
         this.options = $.extend({}, defaults, options);
         this.init();
     }
